@@ -528,3 +528,23 @@ Completed 201 Created in 124ms (Views: 1.1ms | ActiveRecord: 117.6ms)
 
 
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/api/users" for 127.0.0.1 at 2018-03-10 10:11:34 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 96ms (Views: 40.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/users/" for 127.0.0.1 at 2018-03-10 10:12:34 -0300
+Processing by Api::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users/?name=carolina&last_name=perezoooooo" for 127.0.0.1 at 2018-03-10 10:12:48 -0300
+Processing by Api::UsersController#index as HTML
+  Parameters: {"name"=>"carolina", "last_name"=>"perezoooooo"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
